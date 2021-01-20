@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Мария Масич](https://up.htmlacademy.ru/htmlcss/30/user/418063).
-* Наставник: `Неизвестно`.
+- Студент: [Мария Масич](https://up.htmlacademy.ru/htmlcss/30/user/418063).
+- Наставник: [Алексей Удод](https://htmlacademy.ru/profile/id523387).
 
 ---
 
