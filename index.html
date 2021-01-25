@@ -3,29 +3,33 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Техномарт</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>"Техномарт" - интернет-магазин строительных материалов</title>
   <link rel="stylesheet" href="#">
 </head>
 
 <body>
-  <!-- Header page-header -->
+  <!-- header page-header -->
   <header class="page-header">
-    <!-- Page-header menu -->
+    <!-- page-header menu -->
     <div class="page-header__menu">
-      <a class="page-header__logo" href="#">Техномарт</a>
+      <a class="page-header__logo">Техномарт</a>
 
-      <form class="page-header__form" action="#" method="GET">
+      <form class="page-header__form" action="#" method="POST">
         <label for="site-search">Поиск на сайте:</label> <!-- Hidden label -->
-        <input class="page-header__search" id="site-search" type="search" name="search" placeholder="Поиск:">
-        <button class="page-header__form-btn" type="submit">Поиск</button> <!-- Нужна ли кнопка? Отправка запроса через enter -->
+          <input class="page-header__search" id="site-search" type="search" name="search" placeholder="Поиск:">
+        <button class="page-header__form-btn" type="submit"> <!-- Кнопка отправки = иконка - лупа  -->
+          <span class="invisible-desc">Поиск</span> <!-- span будет скрыт  -->
+        </button>
       </form>
 
-      <a class="page-header__link" href="#">Закладки: 0</a>
-      <a class="page-header__link" href="#">Корзина: 0</a>
+      <a class="page-header__link" href="#">Закладки: <span>0</span></a>
+      <a class="page-header__link" href="#">Корзина: <span>0</span></a>
       <a class="page-header__btn btn-order" href="#" type="button">Оформить заказ</a>
     </div>
-    <!-- Page-header menu end -->
-    <!-- Page-header submenu -->
+    <!-- page-header menu end -->
+
+    <!-- page-header submenu -->
     <div class="page-header__submenu">
       <p class="page-header__desc"><i>Интернет-магазин<br>строительных материалов <br>  и инструментов для ремонта</i></p>
       
@@ -38,36 +42,33 @@
         <a class="page-header__btn btn-entrance" href="#" type="button">Войти</a>
         <a class="page-header__btn btn-registration" href="#" type="button">Регистрация</a>
       </div>
-      <!-- Nav-menu -->
+      <!-- nav-menu -->
       <nav class="page-header__nav">
         <ul class="page-header__list">
           <li class="page-header__item"><a>Главная</a></li>
           <li class="page-header__item"><a href="#">Компания</a></li>
-          <li class="page-header__item"><a href="#">Каталог</a></li>
+          <li class="page-header__item"><a href="catalog.html">Каталог</a></li>
           <li class="page-header__item"><a href="#">Новости</a></li>
           <li class="page-header__item"><a href="#">Спецпредложения</a></li>
           <li class="page-header__item"><a href="#">Доставка</a></li>
           <li class="page-header__item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
-      <!-- Nav-menu end -->
+      <!-- nav-menu end -->
     </div>
-    <!-- Page-header submenu end -->
+    <!-- page-header submenu end -->
   </header>
-  <!-- Header page-header end -->
-  <!-- Main page-main -->
+  <!-- header page-header end -->
+
+  <!-- main page-main -->
   <main class="page-main">
-    <h1 class="page-main__title">Интернет магазин «Техномарт»</h1> <!-- Hidden title -->
-    <!-- Section Catalog -->
+    <h1 class="page-main__title">Интернет магазин «Техномарт»</h1> <!-- hidden title -->
+    <!-- section catalog -->
     <section class="catalog">
-      <h2 class="catalog__title">Каталог товаров:</h2> <!-- Hidden title -->
+      <h2 class="catalog__title">Каталог товаров:</h2> <!-- hidden title -->
 
       <div class="catalog__slider">
-        <!-- Элемент каталога - слайдер -->
-        <!-- Полную разметку слайдера не делала -->
-        <h3 class="catalog__slider-title">Перфораторы</h3>
-        <p class="catalog__slider-desc">Настоящие мужские игрушки</p>
-        <a class="catalog__slider-btn btn-red" href="#" type="button">Открыть каталог</a>
+        <!-- Элемент каталога - слайдер / не успела сделать -->
       </div>
 
       <ul class="catalog__list">
@@ -99,8 +100,9 @@
         </li>
       </ul>
     </section>
-    <!-- Section Catalog end -->
-    <!-- Section Popular-products -->
+    <!-- section catalog end -->
+
+    <!-- section popular-products -->
     <section class="popular-products">
       <header class="popular-products__header"> <!-- Могу ошибаться в необходимости данного блока, но думаю это разумнее дива -->
         <h2 class="popular-products__title">Популярные товары:</h2>
@@ -111,57 +113,103 @@
         <!-- Карточка товара - 1 -->
         <li class="popular-products__item">
           <a class="popular-products__link" href="#">
-            <img class="popular-products__img" src="#" alt="Карточка товара">
+            <img class="popular-products__img" src="#" alt="Перфоратор BOSCH  BFG модель 9000">
 
             <div class="popular-products__info">
-              <h4 class="popular-products__item-title">Перфоратор BOSCH BFG 9000</h4>
-              <p class="popular-products__item-price"><s>32500 Р.</s></p>
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 9000</h4>
+              <span class="popular-products__item-price"><s>32500 Р.</s></span>
               <button class="popular-products__item-new-price" type="button">25500 Р.</button>
             </div>
           </a>
+
+          <!-- Всплывающий блок после наведения (:hover)на карточку товара -->
+          <div class="popular-products__overlay">
+            <button class="popular-products__btn" type="button" value="Купить">КУПИТЬ</button><br>
+            <a class="popular-products__marker" href="#" type="button">В ЗАКЛАДКИ</a>
+
+            <div class="popular-products__info">
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 9000</h4>
+              <span class="popular-products__item-price"><s>32500 Р.</s></span>
+              <button class="popular-products__item-new-price" type="button">25500 Р.</button>
+            </div>
+          </div>
         </li>
         <!-- Карточка товара - 2 -->
         <li class="popular-products__item">
           <a class="popular-products__link" href="#">
-            <img class="popular-products__img" src="#" alt="Карточка товара">
+            <img class="popular-products__img" src="#" alt="Перфоратор BOSCH  BFG модель 3000">
             <span class="popular-products__new">new</span> <!-- Разметка элемента через псевдоэлемент или отдельный класс -->
         
             <div class="popular-products__info">
-              <h4 class="popular-products__item-title">Перфоратор BOSCH BFG 3000</h4>
-              <p class="popular-products__item-price"><s>22500 Р.</s></p>
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 3000</h4>
+              <span class="popular-products__item-price"><s>22500 Р.</s></span>
               <button class="popular-products__item-new-price" type="button">15500 Р.</button>
             </div>
           </a>
+          <!-- Всплывающий блок после наведения (:hover)на карточку товара -->
+          <div class="popular-products__overlay">
+            <button class="popular-products__btn" type="button" value="Купить">КУПИТЬ</button><br>
+            <a class="popular-products__marker" href="#" type="button">В ЗАКЛАДКИ</a>
+
+            <div class="popular-products__info">
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 3000</h4>
+              <span class="popular-products__item-price"><s>22500 Р.</s></span>
+              <button class="popular-products__item-new-price" type="button">15500 Р.</button>
+            </div>
+          </div>
         </li>
         <!-- Карточка товара - 3 -->
         <li class="popular-products__item">
           <a class="popular-products__link" href="#">
-            <img class="popular-products__img" src="#" alt="Карточка товара">
+            <img class="popular-products__img" src="#" alt="Перфоратор BOSCH  BFG модель 6000">
         
             <div class="popular-products__info">
-              <h4 class="popular-products__item-title">Перфоратор BOSCH BFG 6000</h4>
-              <p class="popular-products__item-price"><s>30500 Р.</s></p>
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 6000</h4>
+              <span class="popular-products__item-price"><s>30500 Р.</s></span>
               <button class="popular-products__item-new-price" type="button">25500 Р.</button>
             </div>
           </a>
+          <!-- Всплывающий блок после наведения (:hover)на карточку товара -->
+          <div class="popular-products__overlay">
+            <button class="popular-products__btn" type="button" value="Купить">КУПИТЬ</button><br>
+            <a class="popular-products__marker" href="#" type="button">В ЗАКЛАДКИ</a>
+
+            <div class="popular-products__info">
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 6000</h4>
+              <span class="popular-products__item-price"><s>30500 Р.</s></span>
+              <button class="popular-products__item-new-price" type="button">25500 Р.</button>
+            </div>
+          </div>
         </li>
         <!-- Карточка товара - 4 -->
         <li class="popular-products__item">
           <a class="popular-products__link" href="#">
-            <img class="popular-products__img" src="#" alt="Карточка товара">
+            <img class="popular-products__img" src="#" alt="Перфоратор BOSCH  BFG модель 2000">
             <span class="popular-products__new">new</span>
         
             <div class="popular-products__info">
-              <h4 class="popular-products__item-title">Перфоратор BOSCH BFG 2000</h4>
-              <p class="popular-products__item-price"><s>22500 Р.</s></p>
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 2000</h4>
+              <span class="popular-products__item-price"><s>22500 Р.</s></span>
               <button class="popular-products__item-new-price" type="button">12500 Р.</button>
             </div>
           </a>
+          <!-- Всплывающий блок после наведения (:hover)на карточку товара -->
+          <div class="popular-products__overlay">
+            <button class="popular-products__btn" type="button" value="Купить">КУПИТЬ</button><br>
+            <a class="popular-products__marker" href="#" type="button">В ЗАКЛАДКИ</a>
+
+            <div class="popular-products__info">
+              <h4 class="popular-products__item-title">Перфоратор BOSCH  BFG 2000</h4>
+              <span class="popular-products__item-price"><s>22500 Р.</s></span>
+              <button class="popular-products__item-new-price" type="button">12500 Р.</button>
+            </div>
+          </div>
         </li>
       </ul>
     </section>
-    <!-- Section Popular-products end -->
-    <!-- Section Popular-brands -->
+    <!-- section popular-products end -->
+
+    <!-- section popular-brands -->
     <section class="popular-brands">
       <header class="popular-brands__header"> <!-- Могу ошибаться в необходимости данного блока, но думаю это разумнее дива -->
         <h2 class="popular-brands__title">Популярные производители:</h2>
@@ -172,94 +220,62 @@
         <!-- Логотип производителя - 1 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'BOSCH'">
           </a>
         </li>
         <!-- Логотип производителя - 2 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'Makita'">
           </a>
         </li>
         <!-- Логотип производителя - 3 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'DeWalt'">
           </a>
         </li>
         <!-- Логотип производителя - 4 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'Интерскол'">
           </a>
         </li>
         <!-- Логотип производителя - 5 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'HITACHI'">
           </a>
         </li>
         <!-- Логотип производителя - 6 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'LG'">
           </a>
         </li>
         <!-- Логотип производителя - 7 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'AEG POWER SOLUTIONS'">
           </a>
         </li>
         <!-- Логотип производителя - 8 -->
         <li class="popular-brands__item">
           <a class="popular-brands__link" href="#">
-            <img class="popular-brands__img" src="#" alt="Логотип бренда">
+            <img class="popular-brands__img" src="#" alt="Логотип бренда 'metabo work. don't play.'">
           </a>
         </li>
       </ul>
     </section>
-    <!-- Section Popular-brands end -->
-    <!-- Section Services -->
+    <!-- section popular-brands end -->
+
+    <!-- section services -->
     <section class="services">
-      <h2 class="services__title">Сервисы</h2>
-      <p class="services__desc">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки 
-        приятными.</p>
-
-        <ul class="services__list"> 
-          <li class="services__item">
-            <a class="services__link"href="#">Доставка</a>
-          </li> 
-          <li class="services__item">
-            <a class="services__link" href="#">Гарантия</a>
-          </li> 
-          <li class="services__item">
-            <a class="services__link" href="#">Кредит</a>
-          </li> 
-        </ul>
-
-        <!-- Предполагаю/ не уверена, что правый блок с описанием выбранной услуги, размечен через див -->
-        <div class="services__delivery">
-          <h3 class="services__delivery-title">Доставка</h3>
-          <p class="services__delivery-desc">Мы с удовольствием доставим ваш товар прямо<br>к вашему подъезду совершенно бесплатно!<br>
-            Ведь мы неплохо заработаем,<br>поднимая его на ваш этаж!</p>
-        </div>
-
-        <!-- Предполагаемые другие два блока -->
-        <!-- 
-        <div class="services__warranty">
-          <h3 class="services__warranty-title">Гарантия</h3>
-          <p class="services__warranty-desc">Lorem ipsum dolor sit amet.</p>
-        </div>
-
-        <div class="services__credit">
-          <h3 class="services__credit-title">Кредит</h3>
-          <p class="services__credit-desc">Lorem ipsum dolor sit amet.</p>
-        </div> 
-        -->
+      <!-- Это слайдер - не успела сделать -->
     </section>
-    <!-- Section Services end -->
-    <!-- Section Company -->
+    <!-- section services end -->
+
+    <!-- section company -->
     <section class="company">
       <!-- Блок "О компании" -->
       <div class="company__about">
@@ -277,67 +293,98 @@
 
         <a class="company__details btn-red" href="#" type="button">Подробнее о компании</a>
       </div>
+      <!-- Блок "Контакты" -->
       <div class="company__contacts">
         <h2 class="company__contacts-title">Контакты</h2>
 
         <p class="company__contacts-desc">Вы можете забрать товар сами,<br>заехав в наш офис:</p>
-        <!-- Предполагаю интеративную карту -->
-        <!--
-          <iframe class="company__map" src="#" frameborder="0"></iframe>
-        -->
+
+        <!-- Карта(img)- ссылка с указанием адреса офиса и переходом на сервис карт (Гугл или Яндекс) -->
+        <a href="#">
+          <img class="company__contact-map" src="#" alt="Карта с указанием адреса офиса: г. Санкт-Петербург, 
+          ул. Б. Конюшенная, д. 19/8">
+        </a>
+
         <a class="company__details-address btn-red" href="#" type="button">Заблудились? Напишите нам!</a>
       </div>
     </section>
-    <!-- Section Company end -->
+    <!-- section company end -->
   </main>
-  <!-- Page-main end -->
-  <!-- Page-footer -->
+  <!-- page-main end -->
+
+  <!-- page-footer -->
   <footer class="page-footer">
+    <!-- Верхняя часть footer'а -->
     <div class="page-footer__top">
-      <div>
-        <!-- Разобраться в разметке этого блока -->
+      <div class="#"> <!-- Ступор в озаглавливании этих дивов, понимаю, что для удобного расположения они нужны, но как объединить по смыслу? -->
+        <a class="page-footer__logo">Техномарт</a>
+
+        <nav class="page-footer__nav">
+          <ul class="page-footer__list">
+            <li class="page-footer__item"><a href="#">Компания</a></li>
+            <li class="page-footer__item"><a href="#">Новости</a></li>
+            <li class="page-footer__item"><a href="catalog.html">Каталог</a></li>
+            <li class="page-footer__item"><a href="#">Доставка</a></li>
+            <li class="page-footer__item"><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="#"> <!-- Ступор в озаглавливании этих дивов, понимаю, что для удобного расположения они нужны, но как объединить по смыслу? -->
+
+        <p class="page-footer__contacts">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+          +7 (812) 555-05-55
+        </p>
+
+        <div class="page-footer__block-link">
+          <a class="page-footer__link" href="#">Материалы</a>
+          <a class="page-footer__link" href="#">Техника</a>
+          <a class="page-footer__link" href="#">Инструмент</a>
+          <a class="page-footer__link" href="#">Спецпредложения</a>
+        </div>
       </div>
     </div>
+    <!-- Нижняя часть footer'а -->
     <div class="page-footer__bottom">
-
+      <!-- Нижний-левый блок footer'а -->
       <div class="page-footer__left">
         <p class="page-footer__copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
       </div>
-
+      <!-- Нижний-средний блок footer'а -->
       <div class="page-footer__medium">
         <ul class="page-footer__social-list">
           <!-- Иконка Вконтакте -->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети">
+              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети Вконтакте">
             </a>
           </li>
           <!-- Иконка Фейсбук -->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети">
+              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети Фейсбук">
             </a>
           </li>
           <!-- Иконка Инстаграм -->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети">
+              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети Инстаграм">
             </a>
           </li>
         </ul>
       </div>
-
+      <!-- Нижний-правый блок footer'а -->
       <div class="page-footer__right">
-        <p class="page-footer__feedback">Обратная связь: 
+        <address class="page-footer__feedback">Обратная связь: 
           <a class="page-footer__feedback-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="page-footer__develop">Разработано — 
-          <a class="page-footer__develop-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
-        </p>
+        </address>
+        <address class="page-footer__develop">Разработано — 
+          <a class="page-footer__develop-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </address>
       </div>
     </div>
   </footer>
-  <!-- Page-footer end -->
+  <!-- page-footer end -->
 </body>
 
 </html>
