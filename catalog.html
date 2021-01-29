@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>"Техномарт" - Каталог товаров интернет-магазина строительных материалов</title>
-  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,7 +16,7 @@
 
       <form class="page-header__form" action="#" method="POST">
         <label for="site-search">Поиск на сайте:</label> <!-- Hidden label -->
-        <input class="page-header__search" id="site-search" type="search" name="search" placeholder="Поиск:">
+        <input class="page-header__form-search" id="site-search" type="search" name="search" placeholder="Поиск:">
         <button class="page-header__form-btn" type="submit">
           <span>Поиск</span> <!-- span будет скрыт  -->
         </button> <!-- Кнопка отпраки = лупа  -->
@@ -40,13 +39,14 @@
       </div>
 
       <!-- Форма авторизованного пользователя. Не уверена, что правильно сделала -->
-      <form class="page-header__user-form" action="#" method="POST">
+      <form class="page-header__user-form" action="#" method="post">
 
         <a class="page-header__user-active-btn" href="#">
           <span class="invisible-desc">Перейти в профиль пользователя</span> <!-- span будет скрыт = кнопка - иконка  -->
         </a>
-        <label for="site-user">Активный пользователь на сайте</label> <!-- Hidden label -->
-        <input class="page-header__user" id="site-user" type="submit" name="user" value="Равшан Джамшутович">
+
+        <button class="page-header__user" type="button" value="Равшан Джамшутович">Равшан Джамшутович</button>
+
         <a class="page-header__user-exit-btn" href="#">
           <span class="invisible-desc">Выйти из личного кабинета пользователя</span> <!-- span будет скрыт = кнопка - иконка  -->
         </a>
@@ -87,12 +87,12 @@
     </div>
     <!-- section perforators -->
     <section class="perforators">
-      <h2 class="perforators__title"> ПЕРФОРАТОРЫ</h2>
+      <h2 class="perforators__title"> Перфораторы</h2>
 
       <!-- Блок - фильтр необходимого товара -->
       <div class="perforators__filter-container">
-        <form class="perforators__filter" action=" https://echo.htmlacademy.ru/" method="GET">
-          <h3 class="perforators__filter-title">ФИЛЬТР:</h3>
+        <form class="perforators__filter" action=" https://echo.htmlacademy.ru/" method="get">
+          <h3 class="perforators__filter-title">Фильтр:</h3>
 
           <fieldset>
             <!-- Здесь должен быть ещё один фильтр - ползунок / не успела -->
@@ -104,7 +104,7 @@
           </fieldset>
 
           <fieldset>
-            <legend>ПРОИЗВОДИТЕЛИ:</legend>
+            <legend>Производители:</legend>
               <ul class="perforators__filter-brand">
                 <li class="perforators__filter-brand-item">
                   <label>
@@ -136,22 +136,22 @@
           </fieldset>
 
           <fieldset>
-            <legend>ПИТАНИЕ:</legend>
+            <legend>Питание:</legend>
               <ul class="perforators__filter-supply">
                 <li class="perforators__filter-supply-item">
                   <label>
-                    <input type="radio" name="supply" value="battery" checked>АККУМУЛЯТОРНЫЕ
+                    <input type="radio" name="supply" value="battery" checked>Аккумуляторные
                   </label>
                 </li>
                 <li class="perforators__filter-supply-item">
                   <label>
-                    <input type="radio" name="supply" value="electricity">СЕТЕВЫЕ
+                    <input type="radio" name="supply" value="electricity">Сетевые
                   </label>
                 </li>
               </ul>
           </fieldset>
 
-          <button type="submit">ПОКАЗАТЬ</button>
+          <button type="submit">Показать</button>
 
         </form>
       </div>
@@ -159,7 +159,7 @@
       <div class="perforators__catalog-container">
         <!-- Дополнительное меню-навигация для сортировки товара  -->
         <div class="perforators__catalog-submenu">
-          <h3 class="perforators__submenu-title">СОРТИРОВКА:</h3>
+          <h3 class="perforators__submenu-title">Сортировка:</h3>
 
           <ul class="perforators__sort-list">
             <li class="perforators__sort-item">
@@ -199,8 +199,8 @@
               <button class="perforators__product-new-price" type="button">25500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -222,8 +222,8 @@
               <button class="perforators__product-new-price" type="button">25500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -246,8 +246,8 @@
               <button class="perforators__product-new-price" type="button">25500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -270,8 +270,8 @@
               <button class="perforators__product-new-price" type="button">15500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn"  type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn"  type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 3000</h4>
@@ -293,8 +293,8 @@
               <button class="perforators__product-new-price" type="button">25500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -317,8 +317,8 @@
               <button class="perforators__product-new-price" type="button">12500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 2000</h4>
@@ -341,8 +341,8 @@
               <button class="perforators__product-new-price" type="button">15500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 3000</h4>
@@ -364,8 +364,8 @@
               <button class="perforators__product-new-price" type="button">25500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -388,8 +388,8 @@
               <button class="perforators__product-new-price" type="button">12500 Р.</button>
               <!-- Всплывающий блок после наведения на карточку товара -->
               <div class="perforators__overlay">
-                <button class="perforators__product-btn" type="button" value="Купить">КУПИТЬ</button><br>
-                <button type="button">В ЗАКЛАДКИ</button>
+                <button class="perforators__product-btn" type="button" value="Купить">Купить</button><br>
+                <button type="button">В закладки</button>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 2000</h4>
@@ -424,12 +424,14 @@
     <section class="perforators-about">
       <h2 class="perforators-about__title">Пара слов о перфораторах</h2>
 
-      <p class="perforators-about__desc">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления 
-        отверстий в кирпиче, бетоне и камне.
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и 
-        отбойного молотка.
-        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-      </p>
+      <p class="perforators-about__desc">
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+        
+      <p class="perforators-about__desc">Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять 
+        функции дрели, шуруповерта и отбойного молотка.</p>
+      
+      <p class="perforators-about__desc">В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный 
+        молоток и ударная дрель.</p>
     </section>
     <!-- section perforators-about end -->
   </main>
@@ -457,8 +459,7 @@
         <!-- Ступор в озаглавливании этих дивов, понимаю, что для удобного расположения они нужны, но как объединить по смыслу? -->
 
         <p class="page-footer__contacts">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-          +7 (812) 555-05-55
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8  +7 (812) 555-05-55
         </p>
 
         <div class="page-footer__block-link">
