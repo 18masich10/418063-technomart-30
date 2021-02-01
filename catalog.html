@@ -4,6 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>"Техномарт" - Каталог товаров интернет-магазина строительных материалов</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,14 +17,16 @@
   <header class="page-header">
     <!-- page-header menu -->
     <div class="page-header__menu">
-      <a class="page-header__logo">Техномарт</a>
+      <a class="page-header__logo">
+        <img class="page-header__logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
+      </a>
 
-      <form class="page-header__form" action="#" method="POST">
-        <label for="site-search">Поиск на сайте:</label> <!-- Hidden label -->
-        <input class="page-header__form-search" id="site-search" type="search" name="search" placeholder="Поиск:">
+      <form class="page-header__form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="site-search">Поиск на сайте:</label>
+          <input class="page-header__form-search" id="site-search" type="search" name="search" placeholder="Поиск:">
         <button class="page-header__form-btn" type="submit">
-          <span>Поиск</span> <!-- span будет скрыт  -->
-        </button> <!-- Кнопка отпраки = лупа  -->
+          <span class="visually-hidden">Поиск</span>
+        </button>
       </form>
 
       <a class="page-header__link" href="#">Закладки: <span>0</span></a>
@@ -38,17 +45,17 @@
         <p class="page-header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
 
-      <!-- Форма авторизованного пользователя. Не уверена, что правильно сделала -->
+      <!-- Форма авторизованного пользователя -->
       <form class="page-header__user-form" action="#" method="post">
 
         <a class="page-header__user-active-btn" href="#">
-          <span class="invisible-desc">Перейти в профиль пользователя</span> <!-- span будет скрыт = кнопка - иконка  -->
+          <span class="visually-hidden">Перейти в профиль пользователя</span>
         </a>
 
         <button class="page-header__user" type="button" value="Равшан Джамшутович">Равшан Джамшутович</button>
 
         <a class="page-header__user-exit-btn" href="#">
-          <span class="invisible-desc">Выйти из личного кабинета пользователя</span> <!-- span будет скрыт = кнопка - иконка  -->
+          <span class="visually-hidden">Выйти из аккаунта пользователя</span>
         </a>
       </form>
 
@@ -59,13 +66,27 @@
       <!-- nav-menu -->
       <nav class="page-header__nav">
         <ul class="page-header__list">
-          <li class="page-header__item"><a href="index.html">Главная</a></li>
-          <li class="page-header__item"><a href="#">Компания</a></li>
-          <li class="page-header__item"><a>Каталог</a></li>
-          <li class="page-header__item"><a href="#">Новости</a></li>
-          <li class="page-header__item"><a href="#">Спецпредложения</a></li>
-          <li class="page-header__item"><a href="#">Доставка</a></li>
-          <li class="page-header__item"><a href="#">Контакты</a></li>
+          <li class="page-header__item">
+            <a class="page-header__item-link" href="index.html">Главная</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__item-link" href="#">Компания</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__item-link">Каталог</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__item-link" href="#">Новости</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__item-link" href="#">Спецпредложения</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__item-link" href="#">Доставка</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__item-link" href="#">Контакты</a>
+          </li>
         </ul>
       </nav>
       <!-- nav-menu end -->
@@ -79,15 +100,23 @@
     <!-- Дополнительное меню-навигация по каталогу товаров -->
     <div class="catalog-main__nav">
       <ul class="catalog-main__list">
-        <li class="catalog-main__item"><a href=" index.html">Главная</a></li>
-        <li class="catalog-main__item"><a href="catalog.html">Каталог</a></li>
-        <li class="catalog-main__item"><a href="#">Инструменты</a></li>
-        <li class="catalog-main__item"><a>Перфораторы</a></li>
+        <li class="catalog-main__item">
+          <a class="catalog-main__item-link" href=" index.html">Главная</a>
+        </li>
+        <li class="catalog-main__item">
+          <a class="catalog-main__item-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="catalog-main__item">
+          <a class="catalog-main__item-link" href="#">Инструменты</a>
+        </li>
+        <li class="catalog-main__item">
+          <a class="catalog-main__item-link">Перфораторы</a>
+        </li>
       </ul>
     </div>
     <!-- section perforators -->
     <section class="perforators">
-      <h2 class="perforators__title"> Перфораторы</h2>
+      <h2 class="perforators__title">Перфораторы</h2>
 
       <!-- Блок - фильтр необходимого товара -->
       <div class="perforators__filter-container">
@@ -97,7 +126,7 @@
           <fieldset>
             <!-- Здесь должен быть ещё один фильтр - ползунок / не успела -->
 
-            <legend>ЦЕНА:</legend>
+            <legend>Цена:</legend>
               <label><input type="text" value="0"></label>
               <span> - </span>
               <label><input type="text" value="30000"></label>
@@ -105,30 +134,31 @@
 
           <fieldset>
             <legend>Производители:</legend>
+
               <ul class="perforators__filter-brand">
                 <li class="perforators__filter-brand-item">
                   <label>
-                    <input type="checkbox" name="brand" value="bosch" checked>BOSCH
+                    <input type="checkbox" name="brand" value="bosch" checked>bosch
                   </label>
                 </li>
                 <li class="perforators__filter-brand-item">
                   <label>
-                    <input type="checkbox" name="brand" value="интерскол">ИНТЕРСКОЛ
+                    <input type="checkbox" name="brand" value="интерскол">интерскол
                   </label>
                 </li>
                 <li class="perforators__filter-brand-item">
                   <label>
-                    <input type="checkbox" name="brand" value="makita" checked>MAKITA
+                    <input type="checkbox" name="brand" value="makita" checked>makita
                   </label>
                 </li>
                 <li class="perforators__filter-brand-item">
                   <label>
-                    <input type="checkbox" name="brand" value="dewalt">DEWALT
+                    <input type="checkbox" name="brand" value="dewalt">dewalt
                   </label>
                 </li>
                 <li class="perforators__filter-brand-item">
                   <label>
-                    <input type="checkbox" name="brand" value="hitachi">HITACHI
+                    <input type="checkbox" name="brand" value="hitachi">hitachi
                   </label>
                 </li>
               </ul>
@@ -157,6 +187,7 @@
       </div>
       <!-- Блок - каталог товара - перфораторы  -->
       <div class="perforators__catalog-container">
+
         <!-- Дополнительное меню-навигация для сортировки товара  -->
         <div class="perforators__catalog-submenu">
           <h3 class="perforators__submenu-title">Сортировка:</h3>
@@ -175,11 +206,11 @@
 
           <!-- Кнопки - треугольники  -->
           <button class="perforators__sort-btn">
-            <span class=" invisible-desc">Сортировка снизу вверх</span>
-          </button> <!-- span будет скрыт = кнопка - иконка  -->
+            <span class="visually-hidden">Сортировать по возрастанию</span>
+          </button>
           <button class="perforators__sort-btn">
-            <span class="invisible-desc">Сортировка сверху вниз</span>
-          </button> <!-- span будет скрыт = кнопка - иконка  -->
+            <span class="visually-hidden">Сортировать по убыванию</span>
+          </button>
 
         </div>
           <!-- Список товаров (перфораторы), имеющиеся на сайте  -->
@@ -189,7 +220,8 @@
             <!-- Карточка товара - 1  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 6000">
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG6000.jpg" width="144" height="128"
+                alt="Перфоратор BOSCH  BFG модель 6000">
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -212,7 +244,8 @@
             <!-- Карточка товара - 2  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 6000">
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG6000.jpg" width="144" height="128"
+                alt="Перфоратор BOSCH  BFG модель 6000">
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -235,8 +268,9 @@
             <!-- Карточка товара - 3  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 6000">
-                <span class="perforators__product-new">new</span> <!-- Подумать/уточнить - в Фигме обозначено как "текст на кнопке" -->
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG6000.jpg" width="144" height="128"
+                alt="Перфоратор BOSCH  BFG модель 6000">
+                <span class="perforators__product-new">new</span>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -259,8 +293,9 @@
             <!-- Карточка товара - 4  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 3000">
-                <span class="perforators__product-new">new</span> <!-- Подумать/уточнить - в Фигме обозначено как "текст на кнопке" -->
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG3000.jpg" width="127" height="112"
+                alt="Перфоратор BOSCH  BFG модель 3000">
+                <span class="perforators__product-new">new</span>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 3000</h4>
@@ -283,7 +318,8 @@
             <!-- Карточка товара - 5  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 6000">
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG6000.jpg" width="144" height="128"
+                alt="Перфоратор BOSCH  BFG модель 6000">
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -306,8 +342,9 @@
             <!-- Карточка товара - 6  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 2000">
-                <span class="perforators__product-new">new</span> <!-- Подумать/уточнить - в Фигме обозначено как "текст на кнопке" -->
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG2000.jpg" width="127" height="112"
+                alt="Перфоратор BOSCH  BFG модель 2000">
+                <span class="perforators__product-new">new</span>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 2000</h4>
@@ -330,8 +367,9 @@
             <!-- Карточка товара - 7  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 3000">
-                <span class="perforators__product-new">new</span> <!-- Подумать/уточнить - в Фигме обозначено как "текст на кнопке" -->
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG3000.jpg" width="127" height="112"
+                alt="Перфоратор BOSCH  BFG модель 3000">
+                <span class="perforators__product-new">new</span>
 
                 <div class="perforators__product-info">
                 <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 3000</h4>
@@ -354,7 +392,8 @@
             <!-- Карточка товара - 8  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 6000">
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG6000.jpg" width="144" height="128"
+                alt="Перфоратор BOSCH  BFG модель 6000">
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 6000</h4>
@@ -377,8 +416,9 @@
             <!-- Карточка товара - 9  -->
             <li class="perforators__catalog-item">
               <a class="perforators__product-link" href="#">
-                <img class="perforators__product-img" src="#" alt="Перфоратор BOSCH  BFG модель 2000">
-                <span class="perforators__product-new">new</span> <!-- Подумать/уточнить - в Фигме обозначено как "текст на кнопке" -->
+                <img class="perforators__product-img" src="img/catalog-products-img/perforator-BFG2000.jpg" width="127" height="112"
+                alt="Перфоратор BOSCH  BFG модель 2000">
+                <span class="perforators__product-new">new</span>
 
                 <div class="perforators__product-info">
                   <h4 class="perforators__product-title">Перфоратор BOSCH  BFG 2000</h4>
@@ -401,6 +441,7 @@
           </ul>
         </div>
 
+        <!-- Постраничная навигация -->
         <ul class="perforators__catalog-nav">
           <li class="perforators__catalog-page">
             <a>1</a>
@@ -415,7 +456,7 @@
             <a href="#">Следующая</a>
           </li>
         </ul>
-      
+
       </div>
     </section>
     <!-- section perforators end -->
@@ -424,13 +465,11 @@
     <section class="perforators-about">
       <h2 class="perforators-about__title">Пара слов о перфораторах</h2>
 
-      <p class="perforators-about__desc">
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
-        
-      <p class="perforators-about__desc">Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять 
+      <p class="perforators-about__desc">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления
+        отверстий в кирпиче, бетоне и камне.</p>
+      <p class="perforators-about__desc">Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять
         функции дрели, шуруповерта и отбойного молотка.</p>
-      
-      <p class="perforators-about__desc">В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный 
+      <p class="perforators-about__desc">В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный
         молоток и ударная дрель.</p>
     </section>
     <!-- section perforators-about end -->
@@ -441,8 +480,9 @@
   <footer class="page-footer">
     <!-- Верхняя часть footer'а -->
     <div class="page-footer__top">
+
+      <!-- Подумать над классом блока -->
       <div class="#">
-        <!-- Ступор в озаглавливании этих дивов, понимаю, что для удобного расположения они нужны, но как объединить по смыслу? -->
         <a class="page-footer__logo">Техномарт</a>
 
         <nav class="page-footer__nav">
@@ -455,12 +495,11 @@
           </ul>
         </nav>
       </div>
+      <!-- Подумать над классом блока -->
       <div class="#">
-        <!-- Ступор в озаглавливании этих дивов, понимаю, что для удобного расположения они нужны, но как объединить по смыслу? -->
 
-        <p class="page-footer__contacts">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8  +7 (812) 555-05-55
-        </p>
+        <p class="page-footer__contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </p>
+        <p class="page-footer__contacts">+7 (812) 555-05-55</p>
 
         <div class="page-footer__block-link">
           <a class="page-footer__link" href="#">Материалы</a>
@@ -482,19 +521,19 @@
           <!-- Иконка Вконтакте -->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети Вконтакте">
+              <span class="visually-hidden">Ссылка на страницу htmlacademy в Вконтакте</span>
             </a>
           </li>
           <!-- Иконка Фейсбук -->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети Фейсбук">
+              <span class="visually-hidden">Ссылка на страницу htmlacademy в Фейсбук</span>
             </a>
           </li>
           <!-- Иконка Инстаграм -->
           <li class="page-footer__social-item">
             <a class="page-footer__social-link" href="#">
-              <img class="page-footer__social-icon" src="#" alt="Иконка социальной сети Инстаграм">
+              <span class="visually-hidden">Ссылка на страницу htmlacademy в Инстаграм</span>
             </a>
           </li>
         </ul>
@@ -511,6 +550,21 @@
     </div>
   </footer>
   <!-- page-footer end -->
+
+  <!-- section modal-cart" -->
+  <section class="modal modal-cart">
+    <h2 class="modal-cart__title visually-hidden">Товар в корзине</h2>
+
+    <p class="modal-cart__desc">Товар добавлен в корзину!</p>
+
+    <div class="modal-cart__link">
+      <a class="modal-cart__link-item" href="#">Оформить заказ</a>
+      <a class="modal-cart__link-item" href="#">Продолжить покупки</a>
+    </div>
+
+    <button class="modal-cart__close" type="button">Закрыть</button>
+  </section>
+  <!-- section modal-cart end -->
 </body>
 
 </html>
