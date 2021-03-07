@@ -1398,13 +1398,8 @@ img {
   cursor: default;
 }
 
-.services__tab-desc-list>li:not(.services__switches) {
+.services__tab-box-desc {
   display: none;
-  order: 1;
-}
-
-.services__tab-desc-list>li:target {
-  display: block;
 }
 
 .services__box-current {
@@ -1412,11 +1407,16 @@ img {
 }
 
 .services__tab-box-desc {
-  display: none;
+  position: relative;
 }
 
-.services__tab-box-desc {
-  position: relative;
+.services__tab-desc-list>li:not(.services__list-tabs) {
+  display: none;
+  order: 1;
+}
+
+.services__tab-desc-list>li:target {
+  display: block;
 }
 
 .services__tab-title {
