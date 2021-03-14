@@ -1,3 +1,4 @@
+/* Скрипт для модального окна "Карта" */
 
 const mapLink = document.querySelector(".company__map-link");
 const mapPopup = document.querySelector(".modal__map");

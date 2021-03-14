@@ -1,3 +1,5 @@
+/* Скрипт для модального окна "Обратная связь" */
+
 const messageLink = document.querySelector(".company__details-address");
 const messagePopup = document.querySelector(".modal__message");
 const messageClose = messagePopup.querySelector(".modal__close-message");
@@ -14,7 +16,7 @@ try {
   isStorageSupport = false;
 }
 
-messageLink.addEventListener("click", function () {
+messageLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   messagePopup.classList.add("modal-show");
 

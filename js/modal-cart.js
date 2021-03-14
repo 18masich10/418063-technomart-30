@@ -1,10 +1,13 @@
-const cartLink = document.querySelector(".add-item-cart");
+/* Скрипт для модального окна "Товар добавлен в корзину" */
+
+const cartLink = document.querySelectorAll(".add-item-cart");
 const cartPopup = document.querySelector(".modal__cart");
 const cartClose = cartPopup.querySelector(".modal__close-cart");
 
-cartLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.add("modal-show");
+cartLink.forEach((evt) => {
+  evt.onclick = () => {
+    cartPopup.classList.add("modal-show");
+  }
 });
 
 cartClose.addEventListener("click", function (evt) {

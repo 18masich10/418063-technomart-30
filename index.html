@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="page"  lang="ru">
-
+<html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
   <title>"Техномарт" - интернет-магазин строительных материалов</title>
@@ -10,7 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
@@ -46,7 +45,7 @@
 
           <ul class="page-header__menu-user-list">
             <li class="page-header__menu-user-item">
-              <a class="page-header__menu-user-link page-header__menu-user-link-bookmarks" href="#">Закладки:
+              <a class="page-header__menu-user-link page-header__menu-user-link-bookmarks" href="#" tabindex="0">Закладки:
                 <span>0</span></a>
               <svg class="page-header__icon-bookmarks" width="14" height="16" viewBox="0 0 14 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -54,7 +53,7 @@
               </svg>
             </li>
             <li class="page-header__menu-user-item">
-              <a class="page-header__menu-user-link page-header__menu-user-link-cart" href="#">Корзина:
+              <a class="page-header__menu-user-link page-header__menu-user-link-cart" href="#" tabindex="0">Корзина:
                 <span>0</span></a>
               <svg class="page-header__icon-cart" width="15" height="15" viewBox="0 0 15 15" fill="none"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -195,12 +194,12 @@
           </li>
         </ul>
 
-        <a class="slider__control slider__control-prev" href="#" onclick="previousSlider()">
+        <button class="slider__control slider__control-prev" onclick="previousSlider()">
           <span class="visually-hidden">Предыдущий слайд</span>
-        </a>
-        <a class="slider__control slider__control-next" href="#" onclick="nextSlider()">
+        </button>
+        <button class="slider__control slider__control-next" onclick="nextSlider()">
           <span class="visually-hidden">Следующий слайд</span>
-        </a>
+        </button>
 
         <ul class="slider__pagination">
           <li class="slider__pagination-item">
@@ -254,154 +253,107 @@
 
       <ul class="popular-products__list">
         <!-- Карточка товара - 1 -->
-        <li class="popular-product__item">
+        <li class="popular-product__item" tabindex="0">
           <div class="popular-product__item-img-box">
             <img class="popular-product__item-img popular-product__img-9000" src="img/catalog-products-img/perforator-BFG9000.jpg" width="184"
-              height="164" alt="Перфоратор BOSCH  BFG модель 9000">
+              height="164" alt="Перфоратор BOSCH BFG модель 9000">
           </div>
 
           <div class="popular-product__item-info">
-            <a class="popular-product__item-link" href="#">
-              <h4 class="popular-product__item-title">Перфоратор BOSCH <br> BFG 9000</h4>
-            </a>
+            <h4 class="popular-product__item-title">Перфоратор BOSCH<br> BFG 9000</h4>
             <span class="popular-product__item-price"><s>32500 Р.</s></span>
             <span class="popular-product__item-new-price">25500 Р.</span>
           </div>
 
           <!-- Всплывающий блок после наведения на карточку товара -->
-          <div class="popular-product__overlay">
-            <div class="popular-product__overlay-btn-wrapper">
-              <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
-                <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
-                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
-              </svg>
-              <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
-              <a class="popular-product__item-marker" href="#">В закладки</a>
-            </div>
-
-            <div class="popular-product__item-info">
-              <a class="popular-product__item-link" href="#">
-                <h4 class="popular-product__item-title">Перфоратор BOSCH <br>BFG 9000</h4>
-              </a>
-              <span class="popular-product__item-price"><s>32500 Р.</s></span>
-              <span class="popular-product__item-new-price">25500 Р.</span>
-            </div>
+          <div class="popular-product__overlay-btn-wrapper">
+            <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path
+                d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
+              <path
+                d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
+              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
+            </svg>
+            <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
+            <button class="popular-product__item-marker" type="button">В закладки</button>
           </div>
         </li>
 
         <!-- Карточка товара - 2 -->
-        <li class="popular-product__item popular-product__item-new">
+        <li class="popular-product__item popular-product__item-new" tabindex="0">
           <div class="popular-product__item-img-box">
             <img class="popular-product__item-img popular-product__img-3000" src="img/catalog-products-img/perforator-BFG3000.jpg" width="127"
-              height="112" alt="Перфоратор BOSCH  BFG модель 3000">
+              height="112" alt="Перфоратор BOSCH BFG модель 3000">
           </div>
 
           <div class="popular-product__item-info">
-            <a class="popular-product__item-link" href="#">
-              <h4 class="popular-product__item-title">Перфоратор BOSCH  <br>BFG 3000</h4>
-            </a>
+            <h4 class="popular-product__item-title">Перфоратор BOSCH <br>BFG 3000</h4>
             <span class="popular-product__item-price"><s>22500 Р.</s></span>
             <span class="popular-product__item-new-price">15500 Р.</span>
           </div>
 
           <!-- Всплывающий блок после наведения на карточку товара -->
-          <div class="popular-product__overlay">
-            <div class="popular-product__overlay-btn-wrapper">
-              <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
-                <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
-                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
-              </svg>
-              <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
-              <a class="popular-product__item-marker" href="#">В закладки</a>
-            </div>
-
-            <div class="popular-product__item-info">
-              <a class="popular-product__item-link" href="#">
-                <h4 class="popular-product__item-title">Перфоратор BOSCH <br> BFG 3000</h4>
-              </a>
-              <span class="popular-product__item-price"><s>22500 Р.</s></span>
-              <span class="popular-product__item-new-price">15500 Р.</span>
-            </div>
+          <div class="popular-product__overlay-btn-wrapper">
+            <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
+              <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
+              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
+            </svg>
+            <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
+            <button class="popular-product__item-marker" type="button">В закладки</button>
           </div>
         </li>
 
         <!-- Карточка товара - 3 -->
-        <li class="popular-product__item">
+        <li class="popular-product__item" tabindex="0">
           <div class="popular-product__item-img-box">
             <img class="popular-product__item-img popular-product__img-6000" src="img/catalog-products-img/perforator-BFG6000.jpg" width="144"
-              height="128" alt="Перфоратор BOSCH  BFG модель 6000">
+              height="128" alt="Перфоратор BOSCH BFG модель 6000">
           </div>
-
           <div class="popular-product__item-info">
-            <a class="popular-product__item-link" href="#">
-              <h4 class="popular-product__item-title">Перфоратор BOSCH  <br>BFG 6000</h4>
-            </a>
+            <h4 class="popular-product__item-title">Перфоратор BOSCH<br>BFG 6000</h4>
             <span class="popular-product__item-price"><s>30500 Р.</s></span>
             <span class="popular-product__item-new-price">25500 Р.</span>
           </div>
 
           <!-- Всплывающий блок после наведения на карточку товара -->
-          <div class="popular-product__overlay">
-            <div class="popular-product__overlay-btn-wrapper">
-              <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
-                <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
-                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
-              </svg>
-              <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
-              <a class="popular-product__item-marker" href="#">В закладки</a>
-            </div>
-
-            <div class="popular-product__item-info">
-              <a class="popular-product__item-link" href="#">
-                <h4 class="popular-product__item-title">Перфоратор BOSCH <br> BFG 6000</h4>
-              </a>
-              <span class="popular-product__item-price"><s>30500 Р.</s></span>
-              <span class="popular-product__item-new-price">25500 Р.</span>
-            </div>
+          <div class="popular-product__overlay-btn-wrapper">
+            <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
+              <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
+              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
+            </svg>
+            <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
+            <button class="popular-product__item-marker" type="button">В закладки</button>
           </div>
         </li>
 
         <!-- Карточка товара - 4 -->
-        <li class="popular-product__item popular-product__item-new">
+        <li class="popular-product__item popular-product__item-new" tabindex="0">
           <div class="popular-product__item-img-box">
             <img class="popular-product__item-img popular-product__img-2000" src="img/catalog-products-img/perforator-BFG2000.jpg" width="127"
-              height="112" alt="Перфоратор BOSCH  BFG модель 2000">
+              height="112" alt="Перфоратор BOSCH BFG модель 2000">
           </div>
 
           <div class="popular-product__item-info">
-            <a class="popular-product__item-link" href="#">
-              <h4 class="popular-product__item-title">Перфоратор BOSCH <br> BFG 2000</h4>
-            </a>
+            <h4 class="popular-product__item-title">Перфоратор BOSCH <br> BFG 2000</h4>
             <span class="popular-product__item-price"><s>22500 Р.</s></span>
             <span class="popular-product__item-new-price">12500 Р.</span>
           </div>
 
           <!-- Всплывающий блок после наведения на карточку товара -->
-          <div class="popular-product__overlay">
-            <div class="popular-product__overlay-btn-wrapper">
-              <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
-                <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
-                <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
-              </svg>
-              <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
-              <a class="popular-product__item-marker" href="#">В закладки</a>
-            </div>
-
-            <div class="popular-product__item-info">
-              <a class="popular-product__item-link" href="#">
-                <h4 class="popular-product__item-title">Перфоратор BOSCH <br>BFG 2000</h4>
-              </a>
-              <span class="popular-product__item-price"><s>22500 Р.</s></span>
-              <span class="popular-product__item-new-price">12500 Р.</span>
-            </div>
+          <div class="popular-product__overlay-btn-wrapper">
+            <svg class="popular-product__icon-cart" width=" 15" height="15" viewBox="0 0 15 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" />
+              <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" />
+              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" />
+            </svg>
+            <a class="popular-product__item-btn add-item-cart" href="#">Купить</a>
+            <button class="popular-product__item-marker" type="button">В закладки</button>
           </div>
         </li>
       </ul>
@@ -486,54 +438,47 @@
         </div>
 
         <div class="services__content">
-          <div class="services__list-tabs">
-            <a href="#services__delivery" class="services__btn-tabs services__btn-delivery btn-tabs-current">Доставка</a>
-            <a href="#services__quality" class="services__btn-tabs services__btn-quality">Гарантия</a>
-            <a href="#services__credit" class="services__btn-tabs services__btn-credit">Кредит</a>
-          </div>
+          <nav class="services__list-btn">
+              <button class="services__btn" type="button" data-tab="#tab-1">Доставка</button>
+              <button class="services__btn" type="button" data-tab="#tab-2">Гарантия</button>
+              <button class="services__btn" type="button" data-tab="#tab-3">Кредит</button>
+          </nav>
 
-          <ul class="services__tab-desc-list">
-            <li class="services__tab-box-desc services__box-current" id="services__delivery">
-              <div class="services__tab">
-                <h3 class="services__tab-title">Доставка</h3>
-                <p class="services__tab-desc services__tab-desc-delivery">Мы с удовольствием доставим ваш товар прямо<br> к
-                  вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж! </p>
-              </div>
+          <ul class="services__btn-desc-list">
+            <li class="services__btn-desc-item" id="tab-1">
+              <h3 class="services__btn-title">Доставка</h3>
+              <p class="services__btn-desc services__btn-desc-delivery">
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!</p>
 
-              <div class="services__tab-img-delivery">
-                <img src="img/services-img/img-delivery.png" width="460" height="256" alt="Дополнительное изображение к разделу 'Доставка'- фургон">
-              </div>
+              <p class="services__btn-desc services__btn-desc-delivery">Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!</p>
+
+                <img class="services__btn-img-delivery" src=" img/services-img/img-delivery.png" width="460"
+                  height="256" alt="Дополнительное изображение к разделу 'Доставка'- фургон">
             </li>
+            <li class="services__btn-desc-item" id="tab-2">
+              <h3 class="services__btn-title">Гарантия</h3>
+              <p class="services__btn-desc services__btn-desc-quality">
+                Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,
+                вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
 
-            <li class="services__tab-box-desc" id="services__quality">
-              <div class="services__tab">
-                <h3 class="services__tab-title">Гарантия</h3>
-                <p class="services__tab-desc services__tab-desc-quality">Если купленный у нас товар поломается или заискрит, а
-                  также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-                  сгоревший товар на новый.<br>Дом уж восстановите как-нибудь сами.
-                </p>
-              </div>
-
-              <div class="services__tab-img-quality">
-                <img src="img/services-img/img-quality.png" width="389" height="283"
-                  alt="Дополнительное изображение к разделу 'Гарантия'- картинка наградного знака отличия со значением 100%">
-              </div>
+              <img class="services__btn-img-quality" src="img/services-img/img-quality.png" width="389" height="283"
+                alt="Дополнительное изображение к разделу 'Гарантия'- картинка наградного знака отличия со значением 100%">
             </li>
+            <li class="services__btn-desc-item" id="tab-3">
+              <h3 class="services__btn-title">Кредит</h3>
+              <p class="services__btn-desc services__btn-desc-credit">
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="button services__btn-tab-credit" href="#">Отправить заявку</a>
 
-            <li class="services__tab-box-desc" id="services__credit">
-              <div class="services__tab">
-                <h3 class="services__tab-title">Кредит</h3>
-                <p class="services__tab-desc services__tab-desc-credit">Залезть в долговую яму стало проще!<br>
-                  Кредитные консультанты придут вам на помощь.
-                </p>
-                <a class="button services__tab-btn" href="#">Отправить заявку</a>
-              </div>
-
-              <div class="services__tab-img-credit">
-                <img src="img/services-img/img-credit.png" width="465" height="285"
-                  alt="Дополнительное изображение к разделу 'Кредит'- картинка договора с готовыми к выдаче бумажных денег зелёного цвета со
+              <img class="services__btn-img-credit" src="img/services-img/img-credit.png" width="465" height="285"
+                alt="Дополнительное изображение к разделу 'Кредит'- картинка договора с готовыми к выдаче бумажных денег зелёного цвета со
                   знаком доллора">
-              </div>
             </li>
           </ul>
         </div>
@@ -671,7 +616,7 @@
   <!-- page-footer end -->
 
   <!-- section modal-cart" -->
-  <section class="modal modal__cart">
+  <section class="modal modal__cart" data-modal-window="add-to-cart">
     <div class="modal__cart-wrapper">
       <h2 class="modal__cart-title visually-hidden">Товар в корзине</h2>
       <svg class="modal__icon-mark" width=" 66" height="66" viewBox="0 0 66 66" fill="none"
@@ -744,9 +689,10 @@
   </section>
   <!-- section modal-map end -->
 
-  <script src="js/slider.js"></script>
-  <script src="js/modal-cart.js"></script>
-  <script src="js/modal-message.js"></script>
-  <script src="js/modal-map.js"></script>
+  <script src="js/slider.min.js"></script>
+  <script src="js/app.min.js"></script>
+  <script src="js/modal-cart.min.js"></script>
+  <script src="js/modal-message.min.js"></script>
+  <script src="js/modal-map.min.js"></script>
 </body>
 </html>
