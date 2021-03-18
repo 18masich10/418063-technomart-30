@@ -4,8 +4,10 @@ const messageLink = document.querySelector(".company__details-address");
 const messagePopup = document.querySelector(".modal__message");
 const messageClose = messagePopup.querySelector(".modal__close-message");
 const messageForm = messagePopup.querySelector(".modal__message-form");
-const messageUserName = messagePopup.querySelector(".modal__message-user-name");
-const messageUserEmail = messagePopup.querySelector(".modal__message-user-email");
+const messageUserName = messagePopup.querySelector("[name=name]");
+const messageUserEmail = messagePopup.querySelector("[name=email]");
+const messageUserText = messagePopup.querySelector("[name=message]");
+
 
 let isStorageSupport = true;
 let storage = "";
@@ -16,7 +18,7 @@ try {
   isStorageSupport = false;
 }
 
-messageLink.addEventListener("click", function (evt) {
+messageLink.addEventListener("click", function(evt) {
   evt.preventDefault();
   messagePopup.classList.add("modal-show");
 
@@ -26,20 +28,24 @@ messageLink.addEventListener("click", function (evt) {
   } else {
     messageUserName.focus();
   }
+  console.log("я открылось/ в фокусе!");
 });
 
-messageClose.addEventListener("click", function (evt) {
+messageClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   messagePopup.classList.remove("modal-show");
   messagePopup.classList.remove("modal-error");
+  console.log("я закрылось!");
 });
 
-messageForm.addEventListener("submit", function (evt) {
-  if (!messageUserName.value || !messageUserEmail.value) {
+messageForm.addEventListener("submit", function(evt) {
+
+  if (!messageUserName.value || !messageUserEmail.value || !messageUserText.value) {
     evt.preventDefault();
-    messagePopup.classList.add("modal-error");
+    messagePopup.classList.remove("modal-error");
     messagePopup.offsetWidth = messagePopup.offsetWidth;
     messagePopup.classList.add("modal-error");
+    console.log("я не отправилось!");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", messageUserName.value);
@@ -52,6 +58,7 @@ window.addEventListener("keydown", function (evt) {
     if (messagePopup.classList.contains("modal-show")) {
       evt.preventDefault();
       messagePopup.classList.remove("modal-show");
+      messagePopup.classList.remove("modal-error");
     }
   }
 });
