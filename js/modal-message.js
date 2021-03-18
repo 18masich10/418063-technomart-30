@@ -28,14 +28,12 @@ messageLink.addEventListener("click", function(evt) {
   } else {
     messageUserName.focus();
   }
-  console.log("я открылось/ в фокусе!");
 });
 
 messageClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   messagePopup.classList.remove("modal-show");
   messagePopup.classList.remove("modal-error");
-  console.log("я закрылось!");
 });
 
 messageForm.addEventListener("submit", function(evt) {
@@ -45,13 +43,15 @@ messageForm.addEventListener("submit", function(evt) {
     messagePopup.classList.remove("modal-error");
     messagePopup.offsetWidth = messagePopup.offsetWidth;
     messagePopup.classList.add("modal-error");
-    console.log("я не отправилось!");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("name", messageUserName.value);
     }
   }
 });
+
+messageUserName.required = false;
+messageUserEmail.required = false;
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
